@@ -50,6 +50,8 @@ listaComp.addEventListener('dblclick', function(event){
         }
 })
 
+//Apagar toda a lista
+
 let apagar = document.getElementById('apaga-tudo')
 
 apagar.addEventListener('click', function(event){
@@ -57,4 +59,24 @@ apagar.addEventListener('click', function(event){
     for (let i = (elem.length - 1); i >= 0; i--){
         elem[i].parentNode.removeChild(elem[i])
     }
+})
+
+//Apaga os itens finalizados (Riscados)
+
+let cabotchau = document.getElementById('remover-finalizados')
+
+cabotchau.addEventListener('click', function(event){
+    let elem = document.getElementsByClassName('completed')
+    for (let i = (elem.length - 1); i >= 0; i--){
+        elem[i].parentNode.removeChild(elem[i])
+    }
+})
+
+//Remover Selecionado
+
+let clicado = document.getElementById('remover-selecionado')
+
+clicado.addEventListener('click', function(event){
+    let elem = document.getElementsByClassName('clay')
+    elem[0].parentNode.removeChild(elem[0])
 })
